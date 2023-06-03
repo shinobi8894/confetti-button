@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:rgb(255, 255, 255);
+  background-size: cover;
+  overflow: hidden;
+}
+.confetti-button {
+  outline: none;
+  font-family: "Montserrat";
+  border:none;
+  cursor: pointer;
+  width:100%;
+  height: 100%;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color:#fff;
+  text-align: center;
+  background: #292929;
+  box-shadow: 3px 3px 8px #303030a4,
+              3px 3px 8px #2c2c2c7e;
+  transition: 0.5s;
+}
+.confetti-button:hover {
+  background:#2fdbb6;
+}
+.confetti-button:active {
+  background:#1da88a;
+}
+.button-wrapper {
+  position: relative;
+  width:250px;
+  height:60px;
+}
+.button-wrapper canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

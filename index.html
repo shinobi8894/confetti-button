@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="description" content="Tadashi Amano's Portfolio. Hello, I'm a Full Stack Designer and Developer with expertise in various programming" />
+    <meta name="keywrod" content="Shinobi Developer Portfolio Designer Fullstack Frotnend Backend Crypto Blockchain Web3 Tadashi Amano Shinobi8894 shinobi8894 confetti canvas" />
+    <title>Confetti Button</title>
+  </head>
+  <body>
+    <div class="button-wrapper">
+      <button class="confetti-button">Congratulation 🎉</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+        let canvas = document.createElement("canvas");
+        canvas.width = 600;
+        canvas.height = 600;
+        let container = document.getElementsByClassName("button-wrapper")[0];
+        container.appendChild(canvas);
+
+        let confetti_button = confetti.create(canvas);
+        confetti_button({
+          particleCount: 200,
+          spread: 200,
+          startVelocity: 15,
+          scalar: 0.9,
+          ticks: 90
+        }).then(() => container.removeChild(canvas));
+      });
+    </script>
+  </body>
+</html>
